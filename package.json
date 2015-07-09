@@ -1,0 +1,35 @@
+{
+  "name": "is-valid-fodselsnummer",
+  "description": "Check if input is a valid national identification number of Norway",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "Geir Gåsodden",
+    "email": "geir.gasodden@pythonia.no",
+    "url": "https://github.com/zrrrzzt"
+  },
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "scripts": {
+    "test": "tap test/*.js"
+  },
+  "keywords": [
+    "fodselsnummer",
+    "validation",
+    "national identification number",
+    "Norway"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/zrrrzzt/is-valid-fodselsnummer.git"
+  },
+  "bugs": {
+    "url": "http://github.com/zrrrzzt/is-valid-fodselsnummer/issues"
+  },
+  "devDependencies": {
+    "jscs": "^1.13.1",
+    "tap": "^1.3.1"
+  }
+}
