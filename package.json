@@ -1,7 +1,7 @@
 {
   "name": "is-valid-fodselsnummer",
   "description": "Check if input is a valid national identification number of Norway",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "author": {
     "name": "Geir Gåsodden",
@@ -16,9 +16,10 @@
     "test": "tap test/*.js"
   },
   "keywords": [
-    "fodselsnummer",
-    "validation",
-    "national identification number",
+    "Fødselsnummer",
+    "Fodselsnummer",
+    "Validation",
+    "National Identification Number",
     "Norway"
   ],
   "repository": {

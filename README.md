@@ -3,6 +3,26 @@
 
 Check if supplied input is valid fødselsnummer ([Norwegian national identification number](https://en.wikipedia.org/wiki/National_identification_number#Norway)).
 
+## Installation
+
+From npm
+
+```sh
+$ npm intstall --save is-valid-fodselsnummer
+```
+
+From GitHub
+
+```sh
+$ git clone https://github.com/zrrrzzt/is-valid-fodselsnummer.git
+```
+
+cd into directory and install dependencies
+
+```sh
+$ npm install
+```
+
 ## Usage
 
 ```javascript
