@@ -8,7 +8,7 @@ Check if supplied input is valid fødselsnummer ([Norwegian national identificat
 From npm
 
 ```sh
-$ npm intstall --save is-valid-fodselsnummer
+$ npm install --save is-valid-fodselsnummer
 ```
 
 From GitHub
