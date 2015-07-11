@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/zrrrzzt/is-valid-fodselsnummer.svg?branch=master)](https://travis-ci.org/zrrrzzt/is-valid-fodselsnummer)
+[![Coverage Status](https://coveralls.io/repos/zrrrzzt/is-valid-fodselsnummer/badge.svg?branch=master&service=github)](https://coveralls.io/github/zrrrzzt/is-valid-fodselsnummer?branch=master)
 # is-valid-fodselsnummer
 
 Check if supplied input is valid fødselsnummer ([Norwegian national identification number](https://en.wikipedia.org/wiki/National_identification_number#Norway)).
@@ -34,4 +35,16 @@ isValidFodselsnummer('01010750160');
 isValidFodselsnummer('12341234567');
 // => false
 
+```
+
+## Test
+
+```sh
+$ npm test
+```
+
+## Coverage
+
+```sh
+$ npm run coverage
 ```
