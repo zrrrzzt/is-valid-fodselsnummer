@@ -13,9 +13,10 @@
     "node": ">=0.12.0"
   },
   "scripts": {
-    "test": "tap --reporter=spec test/*.js",
+    "test": "standard && tap --reporter=spec test/*.js",
     "coverage": "tap test/*.js --coverage",
-    "coveralls": "tap --cov --coverage-report=lcov test/*.js && cat coverage/lcov.info | coveralls"
+    "coveralls": "tap --cov --coverage-report=lcov test/*.js && cat coverage/lcov.info | coveralls",
+    "setup": "npm install && node setup.js"
   },
   "keywords": [
     "Fødselsnummer",
@@ -32,8 +33,8 @@
     "url": "http://github.com/zrrrzzt/is-valid-fodselsnummer/issues"
   },
   "devDependencies": {
-    "coveralls": "^2.11.2",
+    "coveralls": "^2.11.4",
     "standard": "^5.4.1",
-    "tap": "^1.3.1"
+    "tap": "^2.3.1"
   }
 }
