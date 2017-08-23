@@ -1,6 +1,10 @@
 'use strict'
 
-function isValidFodselsnummer (fodselsnummer) {
+function checkType (fodselsnummer) {
+  return parseInt(fodselsnummer[0], 10) > 3 ? 'D' : 'F'
+}
+
+module.exports = (fodselsnummer, type) => {
   if (fodselsnummer.length !== 11) {
     throw new Error('Too short. Expected length of 11.')
   }
@@ -28,7 +32,7 @@ function isValidFodselsnummer (fodselsnummer) {
            (6 * a2) + (5 * i1) + (4 * i2) + (3 * i3) + (2 * u1)) % 11)
   var u2 = k2 === 11 ? 0 : k2
 
-  return u1 === kontrollsiffer1 && u2 === kontrollsiffer2
-}
+  const result = u1 === kontrollsiffer1 && u2 === kontrollsiffer2
 
-module.exports = isValidFodselsnummer
+  return type && result !== false ? checkType(fodselsnummer) : result
+}
