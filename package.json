@@ -10,7 +10,7 @@
   },
   "main": "index.js",
   "engines": {
-    "node": ">=8.9.4"
+    "node": ">=8.11.1"
   },
   "scripts": {
     "test": "standard && nsp check && tap --reporter=spec test/*.js",
@@ -28,11 +28,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/zrrrzzt/is-valid-fodselsnummer.git"
+    "url": "git+https://github.com/zrrrzzt/is-valid-fodselsnummer.git"
   },
   "bugs": {
-    "url": "http://github.com/zrrrzzt/is-valid-fodselsnummer/issues"
+    "url": "https://github.com/zrrrzzt/is-valid-fodselsnummer/issues"
   },
+  "homepage": "https://github.com/zrrrzzt/is-valid-fodselsnummer#readme",
   "devDependencies": {
     "coveralls": "3.0.0",
     "nsp": "3.2.1",
