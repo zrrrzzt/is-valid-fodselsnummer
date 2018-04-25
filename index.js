@@ -4,7 +4,7 @@ function checkType (fodselsnummer) {
   return parseInt(fodselsnummer[0], 10) > 3 ? 'D' : 'F'
 }
 
-module.exports = (fodselsnummer, type) => {
+module.exports = function (fodselsnummer, type) {
   if (fodselsnummer.length !== 11) {
     throw new Error('Too short. Expected length of 11.')
   }
