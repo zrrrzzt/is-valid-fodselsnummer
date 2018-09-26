@@ -17,7 +17,7 @@ tap.throws(
   function () {
     isValidFodselsnummer('1234123456')
   },
-  {message: 'Too short. Expected length of 11.'},
+  { message: 'Too short. Expected length of 11.' },
   'Throws if number too short'
 )
 
