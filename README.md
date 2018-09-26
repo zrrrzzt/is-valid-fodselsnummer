@@ -65,5 +65,3 @@ isValidFodselsnummer('12341234567', true)
 ## License
 
 [MIT](LICENSE)
-
-![Robohash image of is-valid-fodselsnummer](https://robots.kebabstudios.party/is-valid-fodselsnummer.png "Robohash image of is-valid-fodselsnummer")
