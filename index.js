@@ -32,7 +32,7 @@ module.exports = function (fodselsnummer, type) {
            (6 * a2) + (5 * i1) + (4 * i2) + (3 * i3) + (2 * u1)) % 11)
   var u2 = k2 === 11 ? 0 : k2
 
-  const result = u1 === kontrollsiffer1 && u2 === kontrollsiffer2
+  var result = u1 === kontrollsiffer1 && u2 === kontrollsiffer2
 
   return type && result !== false ? checkType(fodselsnummer) : result
 }
