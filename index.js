@@ -8,20 +8,20 @@ function hasValidDate (fodselsnummer) {
   if (parseInt(fodselsnummer[0], 10) > 3) {
     return true // skip date check for d-numbers
   }
-  const d = parseInt(fodselsnummer.substr(0, 2))
-  const m = parseInt(fodselsnummer.substr(2, 2)) - 1
-  const y = parseInt(fodselsnummer.substr(4, 2))
-  const currentCentury = 2000
-  const yyyy = currentCentury + y
-  const date = new Date(yyyy, m, d)
-  const now = new Date()
-  const previousCenturyYYYY = yyyy - 100
+  var d = parseInt(fodselsnummer.substr(0, 2))
+  var m = parseInt(fodselsnummer.substr(2, 2)) - 1
+  var y = parseInt(fodselsnummer.substr(4, 2))
+  var currentCentury = 2000
+  var yyyy = currentCentury + y
+  var date = new Date(yyyy, m, d)
+  var now = new Date()
+  var previousCenturyYYYY = yyyy - 100
   if (date > now) return isValidDateValues(previousCenturyYYYY, m, d)
   else return isValidDateValues(previousCenturyYYYY, m, d) || isValidDateValues(yyyy, m, d)
 }
 
 function isValidDateValues (yyyy, m, d) {
-  const date = new Date(yyyy, m, d)
+  var date = new Date(yyyy, m, d)
   return date.getFullYear() === yyyy && date.getMonth() === m && date.getDate() === d
 }
 
