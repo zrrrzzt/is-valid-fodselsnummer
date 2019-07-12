@@ -30,7 +30,7 @@ $ npm run setup
 
 ## Usage validation
 
-```javascript
+```JavaScript
 const isValidFodselsnummer = require('is-valid-fodselsnummer')
 
 isValidFodselsnummer('01010750160')
@@ -43,7 +43,7 @@ isValidFodselsnummer('12341234567')
 
 ## Usage identification
 
-```javascript
+```JavaScript
 const isValidFodselsnummer = require('is-valid-fodselsnummer')
 
 isValidFodselsnummer('01010750160', true)
