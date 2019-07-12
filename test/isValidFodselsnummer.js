@@ -9,8 +9,8 @@ tap.equal(
 )
 
 tap.equal(
-  false, isValidFodselsnummer('12341234567'),
-  '12341234567 is not a valid ID-number'
+  false, isValidFodselsnummer('11111234567'),
+  '11111234567 is not a valid ID-number'
 )
 
 tap.throws(
@@ -19,6 +19,14 @@ tap.throws(
   },
   { message: 'Too short. Expected length of 11.' },
   'Throws if number too short'
+)
+
+tap.throws(
+  function () {
+    isValidFodselsnummer('30029012311')
+  },
+  { message: 'Invalid date for fodselsnummer.' },
+  'Throws if number contains invalid date (for f-numbers only)'
 )
 
 tap.equal(
@@ -37,6 +45,6 @@ tap.equal(
 )
 
 tap.equal(
-  false, isValidFodselsnummer('12341234567', true),
-  '12341234567 is not a valid ID-number'
+  false, isValidFodselsnummer('11111234567', true),
+  '11111234567 is not a valid ID-number'
 )

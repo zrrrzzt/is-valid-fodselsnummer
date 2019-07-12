@@ -4,9 +4,33 @@ function checkType (fodselsnummer) {
   return parseInt(fodselsnummer[0], 10) > 3 ? 'D' : 'F'
 }
 
+function hasValidDate (fodselsnummer) {
+  if (parseInt(fodselsnummer[0], 10) > 3) {
+    return true // skip date check for d-numbers
+  }
+  const d = parseInt(fodselsnummer.substr(0, 2))
+  const m = parseInt(fodselsnummer.substr(2, 2)) - 1
+  const y = parseInt(fodselsnummer.substr(4, 2))
+  const currentCentury = 2000
+  const yyyy = currentCentury + y
+  const date = new Date(yyyy, m, d)
+  const now = new Date()
+  const previousCenturyYYYY = yyyy - 100
+  if (date > now) return isValidDateValues(previousCenturyYYYY, m, d)
+  else return isValidDateValues(previousCenturyYYYY, m, d) || isValidDateValues(yyyy, m, d)
+}
+
+function isValidDateValues (yyyy, m, d) {
+  const date = new Date(yyyy, m, d)
+  return date.getFullYear() === yyyy && date.getMonth() === m && date.getDate() === d
+}
+
 module.exports = function (fodselsnummer, type) {
   if (fodselsnummer.length !== 11) {
     throw new Error('Too short. Expected length of 11.')
+  }
+  if (!hasValidDate(fodselsnummer)) {
+    throw new Error('Invalid date for fodselsnummer.')
   }
 
   var day = fodselsnummer.substr(0, 2)
