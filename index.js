@@ -6,7 +6,7 @@ function checkType (fodselsnummer) {
 
 function hasValidDate (fodselsnummer) {
   if (parseInt(fodselsnummer[0], 10) > 3) {
-    return true // skip date check for d-numbers
+    fodselsnummer = fodselsnummer[0] - 4 + fodselsnummer.substring(1)
   }
   var d = parseInt(fodselsnummer.substr(0, 2))
   var m = parseInt(fodselsnummer.substr(2, 2)) - 1

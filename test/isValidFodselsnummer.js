@@ -26,7 +26,15 @@ tap.throws(
     isValidFodselsnummer('30029012311')
   },
   { message: 'Invalid date for fodselsnummer.' },
-  'Throws if number contains invalid date (for f-numbers only)'
+  'Throws if number contains invalid date from an f-number'
+)
+
+tap.throws(
+  function () {
+    isValidFodselsnummer('70029012311')
+  },
+  { message: 'Invalid date for fodselsnummer.' },
+  'Throws if number contains invalid date from a d-number'
 )
 
 tap.equal(
