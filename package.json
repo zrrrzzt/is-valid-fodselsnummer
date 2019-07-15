@@ -1,7 +1,7 @@
 {
   "name": "is-valid-fodselsnummer",
   "description": "Check if input is a valid national identification number of Norway",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "license": "MIT",
   "author": {
     "name": "Geir Gåsodden",
