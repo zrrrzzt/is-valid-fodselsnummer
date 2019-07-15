@@ -1,16 +1,20 @@
 'use strict'
 
+function toInt (number) {
+  return parseInt(number, 10)
+}
+
 function checkType (fodselsnummer) {
-  return parseInt(fodselsnummer[0], 10) > 3 ? 'D' : 'F'
+  return toInt(fodselsnummer[0]) > 3 ? 'D' : 'F'
 }
 
 function hasValidDate (fodselsnummer) {
-  if (parseInt(fodselsnummer[0], 10) > 3) {
+  if (toInt(fodselsnummer[0]) > 3) {
     fodselsnummer = fodselsnummer[0] - 4 + fodselsnummer.substring(1)
   }
-  var d = parseInt(fodselsnummer.substr(0, 2))
-  var m = parseInt(fodselsnummer.substr(2, 2)) - 1
-  var y = parseInt(fodselsnummer.substr(4, 2))
+  var d = toInt(fodselsnummer.substr(0, 2))
+  var m = toInt(fodselsnummer.substr(2, 2)) - 1
+  var y = toInt(fodselsnummer.substr(4, 2))
   var currentCentury = 2000
   var yyyy = currentCentury + y
   var date = new Date(yyyy, m, d)
@@ -37,18 +41,18 @@ module.exports = function (fodselsnummer, type) {
   var month = fodselsnummer.substr(2, 2)
   var year = fodselsnummer.substr(4, 2)
   var individsiffer = fodselsnummer.substr(6, 3)
-  var kontrollsiffer1 = parseInt(fodselsnummer.substr(9, 1), 10)
-  var kontrollsiffer2 = parseInt(fodselsnummer.substr(10, 1), 10)
+  var kontrollsiffer1 = toInt(fodselsnummer.substr(9, 1))
+  var kontrollsiffer2 = toInt(fodselsnummer.substr(10, 1))
 
-  var d1 = parseInt(day.substr(0, 1), 10)
-  var d2 = parseInt(day.substr(1, 1), 10)
-  var m1 = parseInt(month.substr(0, 1), 10)
-  var m2 = parseInt(month.substr(1, 1), 10)
-  var a1 = parseInt(year.substr(0, 1), 10)
-  var a2 = parseInt(year.substr(1, 1), 10)
-  var i1 = parseInt(individsiffer.substr(0, 1), 10)
-  var i2 = parseInt(individsiffer.substr(1, 1), 10)
-  var i3 = parseInt(individsiffer.substr(2, 1), 10)
+  var d1 = toInt(day.substr(0, 1))
+  var d2 = toInt(day.substr(1, 1))
+  var m1 = toInt(month.substr(0, 1))
+  var m2 = toInt(month.substr(1, 1))
+  var a1 = toInt(year.substr(0, 1))
+  var a2 = toInt(year.substr(1, 1))
+  var i1 = toInt(individsiffer.substr(0, 1))
+  var i2 = toInt(individsiffer.substr(1, 1))
+  var i3 = toInt(individsiffer.substr(2, 1))
   var k1 = 11 - (((3 * d1) + (7 * d2) + (6 * m1) + m2 + (8 * a1) +
            (9 * a2) + (4 * i1) + (5 * i2) + (2 * i3)) % 11)
   var u1 = k1 === 11 ? 0 : k1
