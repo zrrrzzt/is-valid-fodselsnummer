@@ -36,6 +36,3 @@ node_modules
 
 # Env
 .env
-
-# Lock
-package-lock.json
