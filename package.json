@@ -10,7 +10,7 @@
   },
   "main": "index.js",
   "engines": {
-    "node": ">=8.16.0"
+    "node": ">=14.18.1"
   },
   "scripts": {
     "test": "standard && tap --reporter=spec test/*.js",
@@ -38,5 +38,8 @@
     "coveralls": "3.1.1",
     "standard": "16.0.4",
     "tap": "15.0.10"
+  },
+  "tap": {
+    "check-coverage": false
   }
 }
